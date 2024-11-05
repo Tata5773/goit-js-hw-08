@@ -69,16 +69,16 @@ const galleryContainer = document.querySelector(".gallery");
 const galleryMarkup = images
   .map(
     ({ preview, original, description }) => `
-    <li class="gallery-item">
-      <a class="gallery-link" href="${original}">
-        <img
-          class="gallery-image"
-          src="${preview}"
-          data-source="${original}"
-          alt="${description}"
-        />
-      </a>
-    </li>
+      <li class="gallery-item">
+          <a class="gallery-link" href="${original}">
+              <img
+                  class="gallery-image"
+                  src="${preview}"
+                  data-source="${original}"
+                  alt="${description}"
+              />
+          </a>
+      </li>
   `
   )
   .join("");
@@ -94,7 +94,7 @@ galleryContainer.addEventListener("click", (event) => {
 
   const instance = basicLightbox.create(`
     <img src="${originalSrc}" alt="${event.target.alt}" />
-    `);
+  `);
 
   instance.show();
 
